@@ -5,6 +5,14 @@
 </ion-header>
 
 <ion-content>
-  <ion-button routerLink="/alert">Alert</ion-button>
-  <ion-button routerLink="/action-sheet">Action Sheet</ion-button>
+  <ion-list>
+    <ion-item
+      *ngFor="let component of components"
+      [routerLink]="component.redirecTo"
+      detail="true"
+    >
+      <ion-icon [name]="component.icon" slot="start" color="primary"></ion-icon>
+      {{component.name}}</ion-item
+    >
+  </ion-list>
 </ion-content>
