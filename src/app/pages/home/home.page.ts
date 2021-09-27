@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 interface Componente {
   icon: string;
@@ -11,7 +11,7 @@ interface Componente {
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
 })
-export class HomePage implements OnInit {
+export class HomePage {
   public components: Componente[] = [
     {
       icon: 'american-football-outline',
@@ -28,9 +28,10 @@ export class HomePage implements OnInit {
       name: 'Avatar',
       redirecTo: '/avatar',
     },
+    {
+      icon: 'radio-button-off-outline',
+      name: 'Button',
+      redirecTo: '/button',
+    },
   ];
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }
