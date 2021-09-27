@@ -53,5 +53,10 @@ export class HomePage {
       name: 'Fab',
       redirecTo: '/fab',
     },
+    {
+      icon: 'grid-outline',
+      name: 'Grid',
+      redirecTo: '/grid',
+    },
   ];
 }
