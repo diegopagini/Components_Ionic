@@ -48,5 +48,10 @@ export class HomePage {
       name: 'Date-Time',
       redirecTo: '/date-time',
     },
+    {
+      icon: 'car-outline',
+      name: 'Fab',
+      redirecTo: '/fab',
+    },
   ];
 }

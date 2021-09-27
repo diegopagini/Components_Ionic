@@ -53,6 +53,10 @@ const routes: Routes = [
         (m) => m.DateTimePageModule
       ),
   },
+  {
+    path: 'fab',
+    loadChildren: () => import('./pages/fab/fab.module').then( m => m.FabPageModule)
+  },
 ];
 
 @NgModule({
