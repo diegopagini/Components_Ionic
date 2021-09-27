@@ -41,7 +41,17 @@ const routes: Routes = [
   },
   {
     path: 'checkbox',
-    loadChildren: () => import('./pages/checkbox/checkbox.module').then( m => m.CheckboxPageModule)
+    loadChildren: () =>
+      import('./pages/checkbox/checkbox.module').then(
+        (m) => m.CheckboxPageModule
+      ),
+  },
+  {
+    path: 'date-time',
+    loadChildren: () =>
+      import('./pages/date-time/date-time.module').then(
+        (m) => m.DateTimePageModule
+      ),
   },
 ];
 

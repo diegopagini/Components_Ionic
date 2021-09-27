@@ -43,5 +43,10 @@ export class HomePage {
       name: 'Checkbox',
       redirecTo: '/checkbox',
     },
+    {
+      icon: 'calendar-outline',
+      name: 'Date-Time',
+      redirecTo: '/date-time',
+    },
   ];
 }
