@@ -58,5 +58,10 @@ export class HomePage {
       name: 'Grid',
       redirecTo: '/grid',
     },
+    {
+      icon: 'infinite-outline',
+      name: 'Infinite-Scroll',
+      redirecTo: '/infinite-scroll',
+    },
   ];
 }
