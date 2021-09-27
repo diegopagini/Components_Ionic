@@ -5,7 +5,6 @@ import { ActionSheetController } from '@ionic/angular';
   selector: 'app-action-sheet',
   templateUrl: './action-sheet.page.html',
   styleUrls: ['./action-sheet.page.scss'],
-  encapsulation: ViewEncapsulation.None,
 })
 export class ActionSheetPage {
   constructor(private actionSheetController: ActionSheetController) {}
