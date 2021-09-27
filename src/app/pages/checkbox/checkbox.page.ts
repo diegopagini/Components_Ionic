@@ -28,4 +28,8 @@ export class CheckboxPage {
   public onClick(check: any) {
     console.log(check);
   }
+
+  public getData() {
+    console.log(this.data);
+  }
 }
