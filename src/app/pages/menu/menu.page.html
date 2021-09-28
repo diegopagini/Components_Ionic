@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="second"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>Menu</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content
+  ><ion-menu side="start" menuId="second" contentId="main">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle *ngFor="let option of options$ | async">
+          <ion-item [routerLink]="option.redirecTo">
+            <ion-icon
+              slot="start"
+              [name]="option.icon"
+              color="tertiary"
+            ></ion-icon>
+            {{ option.name }}</ion-item
+          >
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+</ion-content>

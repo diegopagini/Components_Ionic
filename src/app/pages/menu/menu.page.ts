@@ -5,23 +5,22 @@ import { Componente } from 'src/app/interfaces/interfaces';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.page.html',
-  styleUrls: ['./home.page.scss'],
+  selector: 'app-menu',
+  templateUrl: './menu.page.html',
+  styleUrls: ['./menu.page.scss'],
 })
-export class HomePage implements OnInit {
-  public components$: Observable<Componente[]>;
-
+export class MenuPage implements OnInit {
+  public options$: Observable<Componente[]>;
   constructor(
     private menuController: MenuController,
     private dataService: DataService
   ) {}
 
   ngOnInit(): void {
-    this.components$ = this.dataService.getMenuOptions();
+    this.options$ = this.dataService.getMenuOptions();
   }
 
   public showMenu() {
-    this.menuController.open('first');
+    this.menuController.open('second');
   }
 }

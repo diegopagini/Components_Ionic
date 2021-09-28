@@ -89,7 +89,13 @@ const routes: Routes = [
   },
   {
     path: 'loading',
-    loadChildren: () => import('./pages/loading/loading.module').then( m => m.LoadingPageModule)
+    loadChildren: () =>
+      import('./pages/loading/loading.module').then((m) => m.LoadingPageModule),
+  },
+  {
+    path: 'menu',
+    loadChildren: () =>
+      import('./pages/menu/menu.module').then((m) => m.MenuPageModule),
   },
 ];
 
