@@ -68,5 +68,10 @@ export class HomePage {
       name: 'Input Forms',
       redirecTo: '/input',
     },
+    {
+      icon: 'list-outline',
+      name: 'List - Sliding',
+      redirecTo: '/list',
+    },
   ];
 }
