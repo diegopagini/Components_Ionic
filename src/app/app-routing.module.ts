@@ -87,6 +87,10 @@ const routes: Routes = [
         (m) => m.ListReorderPageModule
       ),
   },
+  {
+    path: 'loading',
+    loadChildren: () => import('./pages/loading/loading.module').then( m => m.LoadingPageModule)
+  },
 ];
 
 @NgModule({
