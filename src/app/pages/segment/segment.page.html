@@ -21,8 +21,11 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <ion-list *ngIf="heroes$ | async as heroes">
-    <ion-item *ngFor="let heroe of heroes | filtro :publisher : 'publisher' ">
+  <ion-list *ngIf="heroes$ | async as heroes; else loading">
+    <ion-item
+      class="animate__animated animate__fadeIn"
+      *ngFor="let heroe of heroes | filtro :publisher : 'publisher' "
+    >
       <ion-label>
         <h3>{{heroe.superhero}}</h3>
         <small>{{heroe.alter_ego}}</small>
@@ -33,4 +36,25 @@
       >
     </ion-item>
   </ion-list>
+
+  <ng-template #loading>
+    <ion-list>
+      <ion-item *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]">
+        <ion-label>
+          <h3>
+            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+          </h3>
+
+          <p>
+            <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+        <ion-skeleton-text
+          slot="end"
+          animated
+          style="width: 50px; height: 30px"
+        ></ion-skeleton-text>
+      </ion-item>
+    </ion-list>
+  </ng-template>
 </ion-content>
