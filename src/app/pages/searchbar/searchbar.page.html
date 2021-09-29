@@ -14,7 +14,7 @@
   ></ion-searchbar>
 
   <ion-list *ngIf="albums$ | async as albums">
-    <ion-item *ngFor="let album of albums | filtro: searchText">
+    <ion-item *ngFor="let album of albums | filtro: searchText:'title'">
       <ion-label class="animate__animated animate__fadeIn"
         >{{album.title}}</ion-label
       >
