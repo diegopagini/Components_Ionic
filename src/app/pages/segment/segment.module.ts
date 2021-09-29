@@ -4,21 +4,21 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { SearchbarPageRoutingModule } from './searchbar-routing.module';
+import { SegmentPageRoutingModule } from './segment-routing.module';
 
-import { SearchbarPage } from './searchbar.page';
-import { PipesModule } from 'src/app/pipes/pipes.module';
+import { SegmentPage } from './segment.page';
 import { ComponentsModule } from 'src/app/components/components.module';
+import { PipesModule } from 'src/app/pipes/pipes.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    SearchbarPageRoutingModule,
-    PipesModule,
+    SegmentPageRoutingModule,
     ComponentsModule,
+    PipesModule,
   ],
-  declarations: [SearchbarPage],
+  declarations: [SegmentPage],
 })
-export class SearchbarPageModule {}
+export class SegmentPageModule {}

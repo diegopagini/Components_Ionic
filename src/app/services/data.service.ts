@@ -20,6 +20,10 @@ export class DataService {
   }
 
   public getAlbums(): Observable<any[]> {
-    return this.http.get<Componente[]>(this.albumsApi);
+    return this.http.get<any[]>(this.albumsApi);
+  }
+
+  public getHeroes(): Observable<any[]> {
+    return this.http.get<any[]>('/assets/data/superheroes.json');
   }
 }
