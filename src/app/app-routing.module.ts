@@ -114,6 +114,13 @@ const routes: Routes = [
         (m) => m.ProgressPageModule
       ),
   },
+  {
+    path: 'refresher',
+    loadChildren: () =>
+      import('./pages/refresher/refresher.module').then(
+        (m) => m.RefresherPageModule
+      ),
+  },
 ];
 
 @NgModule({
