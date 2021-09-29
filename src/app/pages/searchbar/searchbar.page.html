@@ -1,0 +1,23 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>Search</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-searchbar
+    placeholder="Buscar album..."
+    animated
+    inputmode="text"
+    (ionChange)="onSearchChange($event)"
+    debounce="250"
+  ></ion-searchbar>
+
+  <ion-list *ngIf="albums$ | async as albums">
+    <ion-item *ngFor="let album of albums | filtro: searchText">
+      <ion-label class="animate__animated animate__fadeIn"
+        >{{album.title}}</ion-label
+      >
+    </ion-item>
+  </ion-list>
+</ion-content>
