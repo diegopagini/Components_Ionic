@@ -1,24 +1,30 @@
 <ion-app>
-  <ion-menu side="start" menuId="first" contentId="main">
-    <ion-header>
-      <ion-toolbar color="primary">
-        <ion-title>Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <ion-list>
-        <ion-menu-toggle *ngFor="let option of options$ | async">
-          <ion-item [routerLink]="option.redirecTo" detail>
-            <ion-icon
-              slot="start"
-              [name]="option.icon"
-              color="secondary"
-            ></ion-icon>
-            {{ option.name }}</ion-item
+  <ion-split-pane when="md" contentId="main">
+    <ion-menu side="start" menuId="first" contentId="main">
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-menu-toggle
+            *ngFor="let option of options$ | async"
+            autoHide="false"
           >
-        </ion-menu-toggle>
-      </ion-list>
-    </ion-content>
-  </ion-menu>
-  <ion-router-outlet id="main"></ion-router-outlet>
+            <ion-item [routerLink]="option.redirecTo" detail>
+              <ion-icon
+                slot="start"
+                [name]="option.icon"
+                color="secondary"
+              ></ion-icon>
+              {{ option.name }}</ion-item
+            >
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+    <ion-router-outlet id="main"></ion-router-outlet>
+  </ion-split-pane>
 </ion-app>
