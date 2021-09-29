@@ -104,7 +104,15 @@ const routes: Routes = [
   },
   {
     path: 'popover',
-    loadChildren: () => import('./pages/popover/popover.module').then( m => m.PopoverPageModule)
+    loadChildren: () =>
+      import('./pages/popover/popover.module').then((m) => m.PopoverPageModule),
+  },
+  {
+    path: 'progress',
+    loadChildren: () =>
+      import('./pages/progress/progress.module').then(
+        (m) => m.ProgressPageModule
+      ),
   },
 ];
 
